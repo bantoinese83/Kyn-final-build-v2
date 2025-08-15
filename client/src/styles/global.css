@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    /* Kyn themed color palette */
+    --background: 42 29% 96%; /* Cream White as background */
+    --foreground: 200 62% 25%; /* Dark Blue for text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 62% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 62% 25%;
+
+    --primary: 30 63% 46%; /* Warm Brown */
+    --primary-foreground: 42 29% 96%;
+
+    --secondary: 42 29% 96%; /* Cream White */
+    --secondary-foreground: 200 62% 25%;
+
+    --muted: 42 29% 96%;
+    --muted-foreground: 200 62% 35%;
+
+    --accent: 72 25% 31%; /* Olive Green */
+    --accent-foreground: 42 29% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 42 29% 96%;
+
+    --border: 42 29% 90%;
+    --input: 42 29% 90%;
+    --ring: 214 50% 36%; /* Navy Blue */
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 214 50% 36%; /* Navy Blue */
+    --sidebar-foreground: 42 29% 96%;
+    --sidebar-primary: 30 63% 46%; /* Warm Brown */
+    --sidebar-primary-foreground: 42 29% 96%;
+    --sidebar-accent: 72 25% 31%; /* Olive Green */
+    --sidebar-accent-foreground: 42 29% 96%;
+    --sidebar-border: 214 50% 30%;
+    --sidebar-ring: 72 25% 31%; /* Olive Green */
+  }
+
+  .dark {
+    --background: 200 62% 15%; /* Dark Blue */
+    --foreground: 42 29% 96%; /* Cream White */
+
+    --card: 200 62% 18%;
+    --card-foreground: 42 29% 96%;
+
+    --popover: 200 62% 18%;
+    --popover-foreground: 42 29% 96%;
+
+    --primary: 30 63% 55%; /* Lighter Warm Brown for dark mode */
+    --primary-foreground: 42 29% 96%;
+
+    --secondary: 200 62% 25%; /* Darker Blue */
+    --secondary-foreground: 42 29% 96%;
+
+    --muted: 200 62% 22%;
+    --muted-foreground: 42 29% 80%;
+
+    --accent: 72 25% 45%; /* Lighter Olive Green for dark mode */
+    --accent-foreground: 42 29% 96%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 42 29% 96%;
+
+    --border: 200 62% 22%;
+    --input: 200 62% 22%;
+    --ring: 214 50% 45%; /* Navy Blue for dark mode */
+    --sidebar-background: 214 50% 20%; /* Darker Navy Blue */
+    --sidebar-foreground: 42 29% 96%;
+    --sidebar-primary: 30 63% 55%; /* Warm Brown */
+    --sidebar-primary-foreground: 42 29% 96%;
+    --sidebar-accent: 72 25% 45%; /* Olive Green */
+    --sidebar-accent-foreground: 42 29% 96%;
+    --sidebar-border: 214 50% 25%;
+    --sidebar-ring: 72 25% 45%; /* Olive Green */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--accent) / 0.3);
+    border-radius: 2px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--accent) / 0.5);
+  }
+}
