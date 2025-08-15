@@ -129,10 +129,10 @@ Added the properly prefixed environment variable to `.env`:
 
 ```bash
 # Before (server-side only)
-GEMINI_API_KEY=AIzaSyBByQxRW62HmLAhouFR_4nMlWb_qdrqTdk
+GEMINI_API_KEY=your_api_key_here
 
 # After (client-side accessible)
-VITE_GEMINI_API_KEY=AIzaSyBByQxRW62HmLAhouFR_4nMlWb_qdrqTdk
+VITE_GEMINI_API_KEY=your_api_key_here
 ```
 
 ### 7. Temporarily Disabled Problematic HOC Usage
