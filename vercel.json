@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build:vercel",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "framework": "vite",
+  "functions": {
+    "api/livekit/token.ts": {
+      "maxDuration": 10
+    },
+    "api/health.ts": {
+      "maxDuration": 5
+    }
+  },
+  "env": {
+    "LIVEKIT_API_KEY": "@livekit_api_key",
+    "LIVEKIT_API_SECRET": "@livekit_api_secret",
+    "LIVEKIT_HOST": "@livekit_host"
+  }
+}
