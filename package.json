@@ -16,7 +16,7 @@
     "dev:server": "nodemon server/index.ts -e ts --exec tsx",
     "dev:server:watch": "nodemon server/index.ts -e ts --exec tsx --watch",
     "build": "vite build",
-    "build:vercel": "vite build --outDir dist",
+    "build:vercel": "vite build",
     "start": "vite preview --port 8080",
     "start:server": "tsx server/index.ts",
     "test": "vitest --run",

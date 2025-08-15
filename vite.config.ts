@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: "../dist/spa",
+    outDir: path.resolve(__dirname, "dist"),
   },
   plugins: [react()],
   resolve: {
